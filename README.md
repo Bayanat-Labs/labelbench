@@ -52,7 +52,14 @@ results/                  aggregate-only public releases
 
 ## Install
 
-LabelBench needs Python 3.10 or newer and has no third-party runtime dependencies. Install from source:
+LabelBench needs Python 3.10 or newer and has no third-party runtime dependencies.
+
+```bash
+pip install bayanat-labelbench
+labelbench --help
+```
+
+Or install from source:
 
 ```bash
 git clone https://github.com/Bayanat-Labs/labelbench.git

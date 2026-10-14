@@ -3,6 +3,7 @@ message: "If you use LabelBench, please cite the technical report below."
 type: software
 title: "LabelBench"
 version: "0.1.0"
+date-released: "2026-10-14"
 license: Apache-2.0
 repository-code: "https://github.com/Bayanat-Labs/labelbench"
 url: "https://www.bayanatlabs.com/research/labelbench"
