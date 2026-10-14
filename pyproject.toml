@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bayanat-labelbench"
+dynamic = ["version"]
+description = "LabelBench by Bayanat Labs, a reproducible audit of automated Arabic data labeling."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{ name = "Bayanat Labs Research" }]
+dependencies = []
+keywords = [
+  "arabic",
+  "arabic-nlp",
+  "benchmark",
+  "data-labeling",
+  "annotation-quality",
+  "dialect-identification",
+  "toxicity-detection",
+  "llm-evaluation",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Natural Language :: Arabic",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Text Processing :: Linguistic",
+]
+
+[project.urls]
+Homepage = "https://www.bayanatlabs.com/research/labelbench"
+Repository = "https://github.com/Bayanat-Labs/labelbench"
+Issues = "https://github.com/Bayanat-Labs/labelbench/issues"
+Paper = "https://www.bayanatlabs.com/research/labelbench-paper-v0.1.pdf"
+
+[project.scripts]
+labelbench = "labelbench.cli:main"
+
+[tool.setuptools]
+packages = ["labelbench", "labelbench.templates"]
+
+[tool.setuptools.package-data]
+"labelbench.templates" = ["*.html"]
+
+[tool.setuptools.dynamic]
+version = { attr = "labelbench.__version__" }

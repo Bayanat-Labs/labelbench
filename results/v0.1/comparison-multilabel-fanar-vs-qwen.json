@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.1",
+  "paired_examples": 300,
+  "a": {
+    "predictions": "runs/ollama-aratox-multilabel-pilot-300/ollama_hf.co_yasserrmd_Fanar-1-9B-Instruct-gguf_Q4_K_M_multilabel_zero_shot/predictions.jsonl",
+    "sha256": "c9d785381a13931ff96d65a0d3f0a71d423699f2c4093a138d45d21db232f357",
+    "accuracy": 0.31333333333333335
+  },
+  "b": {
+    "predictions": "runs/ollama-aratox-multilabel-pilot-300/ollama_qwen2.5_3b_multilabel_zero_shot/predictions.jsonl",
+    "sha256": "ba2a00e32273c93289d96050496bca6819b59e3a2b2c12b0387fcb3a8594ce8a",
+    "accuracy": 0.25333333333333335
+  },
+  "accuracy_difference_a_minus_b": 0.06,
+  "paired_bootstrap_95": {
+    "low": 0.01,
+    "high": 0.11333333333333333
+  },
+  "contingency": {
+    "both_correct": 54,
+    "only_a_correct": 40,
+    "only_b_correct": 22,
+    "neither_correct": 184
+  },
+  "mcnemar_exact_two_sided_p": 0.030015864349067292,
+  "bootstrap_iterations": 10000,
+  "seed": 42
+}

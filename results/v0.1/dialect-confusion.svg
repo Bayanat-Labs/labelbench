@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="650" height="640" viewBox="0 0 650 640">
+<style>text{font-family:Inter,Arial,sans-serif;fill:#17171c}.title{font-size:21px;font-weight:700}.label{font-size:13px;font-weight:700}.value{font-size:15px;font-weight:700}</style>
+<rect width="100%" height="100%" fill="#fff"/>
+<text class="title" x="25" y="34">Dialect-region confusion matrix</text>
+<text x="25" y="60" font-size="13">Rows: gold · columns: predicted · cells: row percentage</text>
+<text class="label" text-anchor="middle" x="196.0" y="92">EGY</text>
+<text class="label" text-anchor="end" x="132" y="161.0">EGY</text>
+<text class="label" text-anchor="middle" x="288.0" y="92">GLF</text>
+<text class="label" text-anchor="end" x="132" y="253.0">GLF</text>
+<text class="label" text-anchor="middle" x="380.0" y="92">IRQ</text>
+<text class="label" text-anchor="end" x="132" y="345.0">IRQ</text>
+<text class="label" text-anchor="middle" x="472.0" y="92">LEV</text>
+<text class="label" text-anchor="end" x="132" y="437.0">LEV</text>
+<text class="label" text-anchor="middle" x="564.0" y="92">MGH</text>
+<text class="label" text-anchor="end" x="132" y="529.0">MGH</text>
+<rect x="150" y="110" width="89" height="89" rx="7" fill="#5b4df2" fill-opacity="0.744"/>
+<text class="value" text-anchor="middle" x="196.0" y="161.0" fill="#fff" style="fill:#fff">81%</text>
+<rect x="242" y="110" width="89" height="89" rx="7" fill="#5b4df2" fill-opacity="0.146"/>
+<text class="value" text-anchor="middle" x="288.0" y="161.0" fill="#17171c" style="fill:#17171c">8%</text>
+<rect x="334" y="110" width="89" height="89" rx="7" fill="#5b4df2" fill-opacity="0.113"/>
+<text class="value" text-anchor="middle" x="380.0" y="161.0" fill="#17171c" style="fill:#17171c">4%</text>
+<rect x="426" y="110" width="89" height="89" rx="7" fill="#5b4df2" fill-opacity="0.121"/>
+<text class="value" text-anchor="middle" x="472.0" y="161.0" fill="#17171c" style="fill:#17171c">5%</text>
+<rect x="518" y="110" width="89" height="89" rx="7" fill="#5b4df2" fill-opacity="0.096"/>
+<text class="value" text-anchor="middle" x="564.0" y="161.0" fill="#17171c" style="fill:#17171c">2%</text>
+<rect x="150" y="202" width="89" height="89" rx="7" fill="#5b4df2" fill-opacity="0.170"/>
+<text class="value" text-anchor="middle" x="196.0" y="253.0" fill="#17171c" style="fill:#17171c">11%</text>
+<rect x="242" y="202" width="89" height="89" rx="7" fill="#5b4df2" fill-opacity="0.654"/>
+<text class="value" text-anchor="middle" x="288.0" y="253.0" fill="#fff" style="fill:#fff">70%</text>
+<rect x="334" y="202" width="89" height="89" rx="7" fill="#5b4df2" fill-opacity="0.187"/>
+<text class="value" text-anchor="middle" x="380.0" y="253.0" fill="#17171c" style="fill:#17171c">13%</text>
+<rect x="426" y="202" width="89" height="89" rx="7" fill="#5b4df2" fill-opacity="0.105"/>
+<text class="value" text-anchor="middle" x="472.0" y="253.0" fill="#17171c" style="fill:#17171c">3%</text>
+<rect x="518" y="202" width="89" height="89" rx="7" fill="#5b4df2" fill-opacity="0.105"/>
+<text class="value" text-anchor="middle" x="564.0" y="253.0" fill="#17171c" style="fill:#17171c">3%</text>
+<rect x="150" y="294" width="89" height="89" rx="7" fill="#5b4df2" fill-opacity="0.105"/>
+<text class="value" text-anchor="middle" x="196.0" y="345.0" fill="#17171c" style="fill:#17171c">3%</text>
+<rect x="242" y="294" width="89" height="89" rx="7" fill="#5b4df2" fill-opacity="0.146"/>
+<text class="value" text-anchor="middle" x="288.0" y="345.0" fill="#17171c" style="fill:#17171c">8%</text>
+<rect x="334" y="294" width="89" height="89" rx="7" fill="#5b4df2" fill-opacity="0.802"/>
+<text class="value" text-anchor="middle" x="380.0" y="345.0" fill="#fff" style="fill:#fff">88%</text>
+<rect x="426" y="294" width="89" height="89" rx="7" fill="#5b4df2" fill-opacity="0.088"/>
+<text class="value" text-anchor="middle" x="472.0" y="345.0" fill="#17171c" style="fill:#17171c">1%</text>
+<rect x="518" y="294" width="89" height="89" rx="7" fill="#5b4df2" fill-opacity="0.080"/>
+<text class="value" text-anchor="middle" x="564.0" y="345.0" fill="#17171c" style="fill:#17171c">0%</text>
+<rect x="150" y="386" width="89" height="89" rx="7" fill="#5b4df2" fill-opacity="0.162"/>
+<text class="value" text-anchor="middle" x="196.0" y="437.0" fill="#17171c" style="fill:#17171c">10%</text>
+<rect x="242" y="386" width="89" height="89" rx="7" fill="#5b4df2" fill-opacity="0.154"/>
+<text class="value" text-anchor="middle" x="288.0" y="437.0" fill="#17171c" style="fill:#17171c">9%</text>
+<rect x="334" y="386" width="89" height="89" rx="7" fill="#5b4df2" fill-opacity="0.146"/>
+<text class="value" text-anchor="middle" x="380.0" y="437.0" fill="#17171c" style="fill:#17171c">8%</text>
+<rect x="426" y="386" width="89" height="89" rx="7" fill="#5b4df2" fill-opacity="0.654"/>
+<text class="value" text-anchor="middle" x="472.0" y="437.0" fill="#fff" style="fill:#fff">70%</text>
+<rect x="518" y="386" width="89" height="89" rx="7" fill="#5b4df2" fill-opacity="0.105"/>
+<text class="value" text-anchor="middle" x="564.0" y="437.0" fill="#17171c" style="fill:#17171c">3%</text>
+<rect x="150" y="478" width="89" height="89" rx="7" fill="#5b4df2" fill-opacity="0.187"/>
+<text class="value" text-anchor="middle" x="196.0" y="529.0" fill="#17171c" style="fill:#17171c">13%</text>
+<rect x="242" y="478" width="89" height="89" rx="7" fill="#5b4df2" fill-opacity="0.252"/>
+<text class="value" text-anchor="middle" x="288.0" y="529.0" fill="#17171c" style="fill:#17171c">21%</text>
+<rect x="334" y="478" width="89" height="89" rx="7" fill="#5b4df2" fill-opacity="0.195"/>
+<text class="value" text-anchor="middle" x="380.0" y="529.0" fill="#17171c" style="fill:#17171c">14%</text>
+<rect x="426" y="478" width="89" height="89" rx="7" fill="#5b4df2" fill-opacity="0.178"/>
+<text class="value" text-anchor="middle" x="472.0" y="529.0" fill="#17171c" style="fill:#17171c">12%</text>
+<rect x="518" y="478" width="89" height="89" rx="7" fill="#5b4df2" fill-opacity="0.408"/>
+<text class="value" text-anchor="middle" x="564.0" y="529.0" fill="#17171c" style="fill:#17171c">40%</text>
+</svg>

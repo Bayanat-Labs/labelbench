@@ -1,0 +1,544 @@
+{
+  "schema_version": "0.1",
+  "benchmark": "bayanat_labelbench",
+  "release_id": "labelbench-v0.1",
+  "generated_at": "2026-07-07T08:06:17.053347+00:00",
+  "result_count": 12,
+  "results": [
+    {
+      "dataset": "aratox",
+      "task": "binary_toxicity",
+      "task_title": "Binary toxicity",
+      "model": "char_ngram_nb",
+      "test_examples": 100,
+      "primary_metric": "accuracy",
+      "primary_score": 0.97,
+      "ci_95_low": 0.93,
+      "ci_95_high": 1.0,
+      "macro_f1": 0.9502570054717294,
+      "micro_f1": null,
+      "sac_95_coverage": 0.89,
+      "test_manifest_sha256": "481c939a12abfe687e86b8e08dceb098cf01f336fa8a2a74c54019e93311ca80",
+      "predictions_sha256": "d0442fb34fe902f3561583121eeea113cfa0772e17fb04bc981e87405cf7f871",
+      "model_metadata": null,
+      "report_source": "runs/aratox-binary-sample100/char_ngram_nb/report.json"
+    },
+    {
+      "dataset": "aratox",
+      "task": "binary_toxicity",
+      "task_title": "Binary toxicity",
+      "model": "ollama_hf.co_yasserrmd_Fanar-1-9B-Instruct-gguf_Q4_K_M_zero_shot",
+      "test_examples": 100,
+      "primary_metric": "accuracy",
+      "primary_score": 0.88,
+      "ci_95_low": 0.82,
+      "ci_95_high": 0.94,
+      "macro_f1": 0.8306041784302655,
+      "micro_f1": null,
+      "sac_95_coverage": 0.0,
+      "test_manifest_sha256": "481c939a12abfe687e86b8e08dceb098cf01f336fa8a2a74c54019e93311ca80",
+      "predictions_sha256": "84e98f912535926966d7040bfd10060ed907444744a138762508b25df1ad9e8e",
+      "model_metadata": {
+        "provider": "ollama_local",
+        "requested_model": "hf.co/yasserrmd/Fanar-1-9B-Instruct-gguf:Q4_K_M",
+        "digest": "688386aeeab85a09e8d10f4512fa89ffaa131df16b6b9eb515b3844460ee5599",
+        "size_bytes": 5382481165,
+        "family": "gemma2",
+        "parameter_size": "8.78B",
+        "quantization_level": "Q4_K_M",
+        "modified_at": "2026-07-06T11:24:57.160005656-04:00"
+      },
+      "report_source": "runs/ollama-aratox-random-pilot-100/ollama_hf.co_yasserrmd_Fanar-1-9B-Instruct-gguf_Q4_K_M_zero_shot/report.json"
+    },
+    {
+      "dataset": "aratox",
+      "task": "binary_toxicity",
+      "task_title": "Binary toxicity",
+      "model": "ollama_qwen2.5_3b_zero_shot",
+      "test_examples": 100,
+      "primary_metric": "accuracy",
+      "primary_score": 0.78,
+      "ci_95_low": 0.7,
+      "ci_95_high": 0.86,
+      "macro_f1": 0.6984649122807018,
+      "micro_f1": null,
+      "sac_95_coverage": 0.0,
+      "test_manifest_sha256": "481c939a12abfe687e86b8e08dceb098cf01f336fa8a2a74c54019e93311ca80",
+      "predictions_sha256": "33d40aef9babcd2e3ecdded3443e856e35b776b2d31fa46249ef0bc3fd856e13",
+      "model_metadata": {
+        "provider": "ollama_local",
+        "requested_model": "qwen2.5:3b",
+        "digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+        "size_bytes": 1929912432,
+        "family": "qwen2",
+        "parameter_size": "3.1B",
+        "quantization_level": "Q4_K_M",
+        "modified_at": "2026-06-15T15:48:26.873744547-04:00"
+      },
+      "report_source": "runs/ollama-aratox-random-pilot-100/ollama_qwen2.5_3b_zero_shot/report.json"
+    },
+    {
+      "dataset": "iadd_dart_region",
+      "task": "dialect_region_identification",
+      "task_title": "Dialect region identification",
+      "model": "char_ngram_nb",
+      "test_examples": 500,
+      "primary_metric": "accuracy",
+      "primary_score": 0.698,
+      "ci_95_low": 0.658,
+      "ci_95_high": 0.74,
+      "macro_f1": 0.6880245288826445,
+      "micro_f1": null,
+      "sac_95_coverage": 0.0,
+      "test_manifest_sha256": "e4654b2435655de7000120e519d2c7cdd918895f970d16d34fe57e0567860ab1",
+      "predictions_sha256": "36e8c62aac802233f430066987ad2f7476d6376a8631821cdcd6535472c89232",
+      "model_metadata": null,
+      "report_source": "runs/iadd-supervised-diagnostic/char_ngram_nb/report.json"
+    },
+    {
+      "dataset": "iadd_dart_region",
+      "task": "dialect_region_identification",
+      "task_title": "Dialect region identification",
+      "model": "ollama_hf.co_yasserrmd_Fanar-1-9B-Instruct-gguf_Q4_K_M_dialect_region_zero_shot",
+      "test_examples": 500,
+      "primary_metric": "accuracy",
+      "primary_score": 0.478,
+      "ci_95_low": 0.434,
+      "ci_95_high": 0.524,
+      "macro_f1": 0.47323261316945897,
+      "micro_f1": null,
+      "sac_95_coverage": 0.0,
+      "test_manifest_sha256": "e4654b2435655de7000120e519d2c7cdd918895f970d16d34fe57e0567860ab1",
+      "predictions_sha256": "0dce733ef2661d28798d83644b50f34e2b8d6929b29c3cb4c6c5dcd09c8136e2",
+      "model_metadata": {
+        "provider": "ollama_local",
+        "requested_model": "hf.co/yasserrmd/Fanar-1-9B-Instruct-gguf:Q4_K_M",
+        "digest": "688386aeeab85a09e8d10f4512fa89ffaa131df16b6b9eb515b3844460ee5599",
+        "size_bytes": 5382481165,
+        "family": "gemma2",
+        "parameter_size": "8.78B",
+        "quantization_level": "Q4_K_M",
+        "modified_at": "2026-07-06T11:24:57.160005656-04:00"
+      },
+      "report_source": "runs/ollama-iadd-region-pilot-500/ollama_hf.co_yasserrmd_Fanar-1-9B-Instruct-gguf_Q4_K_M_dialect_region_zero_shot/report.json"
+    },
+    {
+      "dataset": "iadd_dart_region",
+      "task": "dialect_region_identification",
+      "task_title": "Dialect region identification",
+      "model": "ollama_llama3_latest_dialect_region_zero_shot",
+      "test_examples": 500,
+      "primary_metric": "accuracy",
+      "primary_score": 0.246,
+      "ci_95_low": 0.21,
+      "ci_95_high": 0.286,
+      "macro_f1": 0.18676155636817912,
+      "micro_f1": null,
+      "sac_95_coverage": 0.0,
+      "test_manifest_sha256": "e4654b2435655de7000120e519d2c7cdd918895f970d16d34fe57e0567860ab1",
+      "predictions_sha256": "6fd1dac5b61ba8af429279b9587799f9f314f4b428560b86ff56f5193fa8f65a",
+      "model_metadata": {
+        "provider": "ollama_local",
+        "requested_model": "llama3:latest",
+        "digest": "365c0bd3c000a25d28ddbf732fe1c6add414de7275464c4e4d1c3b5fcb5d8ad1",
+        "size_bytes": 4661224676,
+        "family": "llama",
+        "parameter_size": "8.0B",
+        "quantization_level": "Q4_0",
+        "modified_at": "2026-07-06T03:05:24.992787034-04:00"
+      },
+      "report_source": "runs/ollama-iadd-region-pilot-500/ollama_llama3_latest_dialect_region_zero_shot/report.json"
+    },
+    {
+      "dataset": "iadd_dart_region",
+      "task": "dialect_region_identification",
+      "task_title": "Dialect region identification",
+      "model": "ollama_qwen2_latest_dialect_region_zero_shot",
+      "test_examples": 500,
+      "primary_metric": "accuracy",
+      "primary_score": 0.226,
+      "ci_95_low": 0.19,
+      "ci_95_high": 0.262,
+      "macro_f1": 0.16224571989104883,
+      "micro_f1": null,
+      "sac_95_coverage": 0.0,
+      "test_manifest_sha256": "e4654b2435655de7000120e519d2c7cdd918895f970d16d34fe57e0567860ab1",
+      "predictions_sha256": "42c1e7b63b21d1c7bc926de4c47c932d34efed4067125b9d3d5426c32c2186d4",
+      "model_metadata": {
+        "provider": "ollama_local",
+        "requested_model": "qwen2:latest",
+        "digest": "dd314f039b9d54d5553002c906ce50c9fe7242f73f0680abd04f01c8ecbd2755",
+        "size_bytes": 4431401491,
+        "family": "qwen2",
+        "parameter_size": "7.6B",
+        "quantization_level": "Q4_0",
+        "modified_at": "2026-07-06T03:06:57.755590242-04:00"
+      },
+      "report_source": "runs/ollama-iadd-region-pilot-500/ollama_qwen2_latest_dialect_region_zero_shot/report.json"
+    },
+    {
+      "dataset": "iadd_dart_region",
+      "task": "dialect_region_identification",
+      "task_title": "Dialect region identification",
+      "model": "ollama_qwen2.5_3b_dialect_region_zero_shot",
+      "test_examples": 500,
+      "primary_metric": "accuracy",
+      "primary_score": 0.224,
+      "ci_95_low": 0.188,
+      "ci_95_high": 0.266,
+      "macro_f1": 0.14897307151442996,
+      "micro_f1": null,
+      "sac_95_coverage": 0.0,
+      "test_manifest_sha256": "e4654b2435655de7000120e519d2c7cdd918895f970d16d34fe57e0567860ab1",
+      "predictions_sha256": "febec01da41df3bd57cf2b15adb00767af0d4e46734d9a70c326bb5d5fed0846",
+      "model_metadata": {
+        "provider": "ollama_local",
+        "requested_model": "qwen2.5:3b",
+        "digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+        "size_bytes": 1929912432,
+        "family": "qwen2",
+        "parameter_size": "3.1B",
+        "quantization_level": "Q4_K_M",
+        "modified_at": "2026-06-15T15:48:26.873744547-04:00"
+      },
+      "report_source": "runs/ollama-iadd-region-pilot-500/ollama_qwen2.5_3b_dialect_region_zero_shot/report.json"
+    },
+    {
+      "dataset": "massive_ar_sa",
+      "task": "intent_classification",
+      "task_title": "Intent classification",
+      "model": "char_ngram_nb",
+      "test_examples": 2974,
+      "primary_metric": "accuracy",
+      "primary_score": 0.7424344317417619,
+      "ci_95_low": 0.7273032952252858,
+      "ci_95_high": 0.7579018157363819,
+      "macro_f1": 0.6514835986045877,
+      "micro_f1": null,
+      "sac_95_coverage": 0.39509078681909887,
+      "test_manifest_sha256": "f21698296cd03434f4aa05f43039e8738060e7048eb75b6d82dd12b56cf17124",
+      "predictions_sha256": "a191c5585de557550675ed38ccfe3b8d5b9ce55b36781eda7b9907a31cd3fb4d",
+      "model_metadata": null,
+      "report_source": "runs/massive-intent-full-pilot/char_ngram_nb/report.json"
+    },
+    {
+      "dataset": "aratox",
+      "task": "toxicity_multilabel",
+      "task_title": "Multi-label toxicity",
+      "model": "char_ngram_nb_ovr_tuned",
+      "test_examples": 300,
+      "primary_metric": "subset_accuracy",
+      "primary_score": 0.49,
+      "ci_95_low": 0.43666666666666665,
+      "ci_95_high": 0.5433333333333333,
+      "macro_f1": 0.7321642237800131,
+      "micro_f1": 0.7393458870168483,
+      "sac_95_coverage": 0.0,
+      "test_manifest_sha256": "96c81982cbcd48e017535ca2bee3d4efb90bacbcce8b43bbb4991c0f687c7951",
+      "predictions_sha256": "f48df069d26e91607d4c607280f20378cb7689562695d341a5bd217a4ec722e1",
+      "model_metadata": {
+        "threshold_tuning": true,
+        "thresholds": {
+          "appearance": 0.95,
+          "cussing": 0.95,
+          "hatred": 0.95,
+          "racial": 0.95,
+          "sexual": 0.95,
+          "violence": 0.95
+        },
+        "validation_fraction": 0.15,
+        "validation_examples": 4956,
+        "validation_subset_accuracy": 0.5540758676351897
+      },
+      "report_source": "runs/aratox-multilabel-sample300/char_ngram_nb_ovr_tuned/report.json"
+    },
+    {
+      "dataset": "aratox",
+      "task": "toxicity_multilabel",
+      "task_title": "Multi-label toxicity",
+      "model": "ollama_hf.co_yasserrmd_Fanar-1-9B-Instruct-gguf_Q4_K_M_multilabel_zero_shot",
+      "test_examples": 300,
+      "primary_metric": "subset_accuracy",
+      "primary_score": 0.31333333333333335,
+      "ci_95_low": 0.2633333333333333,
+      "ci_95_high": 0.36333333333333334,
+      "macro_f1": 0.5046988560671413,
+      "micro_f1": 0.5498281786941581,
+      "sac_95_coverage": 0.0,
+      "test_manifest_sha256": "96c81982cbcd48e017535ca2bee3d4efb90bacbcce8b43bbb4991c0f687c7951",
+      "predictions_sha256": "c9d785381a13931ff96d65a0d3f0a71d423699f2c4093a138d45d21db232f357",
+      "model_metadata": {
+        "provider": "ollama_local",
+        "requested_model": "hf.co/yasserrmd/Fanar-1-9B-Instruct-gguf:Q4_K_M",
+        "digest": "688386aeeab85a09e8d10f4512fa89ffaa131df16b6b9eb515b3844460ee5599",
+        "size_bytes": 5382481165,
+        "family": "gemma2",
+        "parameter_size": "8.78B",
+        "quantization_level": "Q4_K_M",
+        "modified_at": "2026-07-06T11:24:57.160005656-04:00"
+      },
+      "report_source": "runs/ollama-aratox-multilabel-pilot-300/ollama_hf.co_yasserrmd_Fanar-1-9B-Instruct-gguf_Q4_K_M_multilabel_zero_shot/report.json"
+    },
+    {
+      "dataset": "aratox",
+      "task": "toxicity_multilabel",
+      "task_title": "Multi-label toxicity",
+      "model": "ollama_qwen2.5_3b_multilabel_zero_shot",
+      "test_examples": 300,
+      "primary_metric": "subset_accuracy",
+      "primary_score": 0.25333333333333335,
+      "ci_95_low": 0.20333333333333334,
+      "ci_95_high": 0.2966666666666667,
+      "macro_f1": 0.39311149593635203,
+      "micro_f1": 0.43028846153846156,
+      "sac_95_coverage": 0.0,
+      "test_manifest_sha256": "96c81982cbcd48e017535ca2bee3d4efb90bacbcce8b43bbb4991c0f687c7951",
+      "predictions_sha256": "ba2a00e32273c93289d96050496bca6819b59e3a2b2c12b0387fcb3a8594ce8a",
+      "model_metadata": {
+        "provider": "ollama_local",
+        "requested_model": "qwen2.5:3b",
+        "digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+        "size_bytes": 1929912432,
+        "family": "qwen2",
+        "parameter_size": "3.1B",
+        "quantization_level": "Q4_K_M",
+        "modified_at": "2026-06-15T15:48:26.873744547-04:00"
+      },
+      "report_source": "runs/ollama-aratox-multilabel-pilot-300/ollama_qwen2.5_3b_multilabel_zero_shot/report.json"
+    }
+  ],
+  "paired_comparisons": [
+    {
+      "schema_version": "0.1",
+      "paired_examples": 100,
+      "a": {
+        "predictions": "runs/aratox-binary-sample100/char_ngram_nb/predictions.jsonl",
+        "sha256": "d0442fb34fe902f3561583121eeea113cfa0772e17fb04bc981e87405cf7f871",
+        "accuracy": 0.97
+      },
+      "b": {
+        "predictions": "runs/ollama-aratox-random-pilot-100/ollama_qwen2.5_3b_zero_shot/predictions.jsonl",
+        "sha256": "33d40aef9babcd2e3ecdded3443e856e35b776b2d31fa46249ef0bc3fd856e13",
+        "accuracy": 0.78
+      },
+      "accuracy_difference_a_minus_b": 0.19,
+      "paired_bootstrap_95": {
+        "low": 0.11,
+        "high": 0.28
+      },
+      "contingency": {
+        "both_correct": 77,
+        "only_a_correct": 20,
+        "only_b_correct": 1,
+        "neither_correct": 2
+      },
+      "mcnemar_exact_two_sided_p": 2.09808349609375e-05,
+      "bootstrap_iterations": 10000,
+      "seed": 42,
+      "mcnemar_holm_adjusted_p": 8.392333984375e-05
+    },
+    {
+      "schema_version": "0.1",
+      "paired_examples": 100,
+      "a": {
+        "predictions": "runs/ollama-aratox-random-pilot-100/ollama_hf.co_yasserrmd_Fanar-1-9B-Instruct-gguf_Q4_K_M_zero_shot/predictions.jsonl",
+        "sha256": "84e98f912535926966d7040bfd10060ed907444744a138762508b25df1ad9e8e",
+        "accuracy": 0.88
+      },
+      "b": {
+        "predictions": "runs/ollama-aratox-random-pilot-100/ollama_qwen2.5_3b_zero_shot/predictions.jsonl",
+        "sha256": "33d40aef9babcd2e3ecdded3443e856e35b776b2d31fa46249ef0bc3fd856e13",
+        "accuracy": 0.78
+      },
+      "accuracy_difference_a_minus_b": 0.1,
+      "paired_bootstrap_95": {
+        "low": 0.02,
+        "high": 0.18
+      },
+      "contingency": {
+        "both_correct": 74,
+        "only_a_correct": 14,
+        "only_b_correct": 4,
+        "neither_correct": 8
+      },
+      "mcnemar_exact_two_sided_p": 0.0308837890625,
+      "bootstrap_iterations": 10000,
+      "seed": 42,
+      "mcnemar_holm_adjusted_p": 0.09004759304720188
+    },
+    {
+      "schema_version": "0.1",
+      "paired_examples": 100,
+      "a": {
+        "predictions": "runs/aratox-binary-sample100/char_ngram_nb/predictions.jsonl",
+        "sha256": "d0442fb34fe902f3561583121eeea113cfa0772e17fb04bc981e87405cf7f871",
+        "accuracy": 0.97
+      },
+      "b": {
+        "predictions": "runs/ollama-aratox-random-pilot-100/ollama_hf.co_yasserrmd_Fanar-1-9B-Instruct-gguf_Q4_K_M_zero_shot/predictions.jsonl",
+        "sha256": "84e98f912535926966d7040bfd10060ed907444744a138762508b25df1ad9e8e",
+        "accuracy": 0.88
+      },
+      "accuracy_difference_a_minus_b": 0.09,
+      "paired_bootstrap_95": {
+        "low": 0.02,
+        "high": 0.17
+      },
+      "contingency": {
+        "both_correct": 85,
+        "only_a_correct": 12,
+        "only_b_correct": 3,
+        "neither_correct": 0
+      },
+      "mcnemar_exact_two_sided_p": 0.03515625,
+      "bootstrap_iterations": 10000,
+      "seed": 42,
+      "mcnemar_holm_adjusted_p": 0.09004759304720188
+    },
+    {
+      "schema_version": "0.1",
+      "paired_examples": 300,
+      "a": {
+        "predictions": "runs/aratox-multilabel-sample300/char_ngram_nb_ovr_tuned/predictions.jsonl",
+        "sha256": "f48df069d26e91607d4c607280f20378cb7689562695d341a5bd217a4ec722e1",
+        "accuracy": 0.49
+      },
+      "b": {
+        "predictions": "runs/ollama-aratox-multilabel-pilot-300/ollama_qwen2.5_3b_multilabel_zero_shot/predictions.jsonl",
+        "sha256": "ba2a00e32273c93289d96050496bca6819b59e3a2b2c12b0387fcb3a8594ce8a",
+        "accuracy": 0.25333333333333335
+      },
+      "accuracy_difference_a_minus_b": 0.23666666666666666,
+      "paired_bootstrap_95": {
+        "low": 0.17666666666666667,
+        "high": 0.2966666666666667
+      },
+      "contingency": {
+        "both_correct": 62,
+        "only_a_correct": 85,
+        "only_b_correct": 14,
+        "neither_correct": 139
+      },
+      "mcnemar_exact_two_sided_p": 1.4279916347173858e-13,
+      "bootstrap_iterations": 10000,
+      "seed": 42,
+      "mcnemar_holm_adjusted_p": 9.9959414430217e-13
+    },
+    {
+      "schema_version": "0.1",
+      "paired_examples": 300,
+      "a": {
+        "predictions": "runs/ollama-aratox-multilabel-pilot-300/ollama_hf.co_yasserrmd_Fanar-1-9B-Instruct-gguf_Q4_K_M_multilabel_zero_shot/predictions.jsonl",
+        "sha256": "c9d785381a13931ff96d65a0d3f0a71d423699f2c4093a138d45d21db232f357",
+        "accuracy": 0.31333333333333335
+      },
+      "b": {
+        "predictions": "runs/ollama-aratox-multilabel-pilot-300/ollama_qwen2.5_3b_multilabel_zero_shot/predictions.jsonl",
+        "sha256": "ba2a00e32273c93289d96050496bca6819b59e3a2b2c12b0387fcb3a8594ce8a",
+        "accuracy": 0.25333333333333335
+      },
+      "accuracy_difference_a_minus_b": 0.06,
+      "paired_bootstrap_95": {
+        "low": 0.01,
+        "high": 0.11333333333333333
+      },
+      "contingency": {
+        "both_correct": 54,
+        "only_a_correct": 40,
+        "only_b_correct": 22,
+        "neither_correct": 184
+      },
+      "mcnemar_exact_two_sided_p": 0.030015864349067292,
+      "bootstrap_iterations": 10000,
+      "seed": 42,
+      "mcnemar_holm_adjusted_p": 0.09004759304720188
+    },
+    {
+      "schema_version": "0.1",
+      "paired_examples": 300,
+      "a": {
+        "predictions": "runs/aratox-multilabel-sample300/char_ngram_nb_ovr_tuned/predictions.jsonl",
+        "sha256": "f48df069d26e91607d4c607280f20378cb7689562695d341a5bd217a4ec722e1",
+        "accuracy": 0.49
+      },
+      "b": {
+        "predictions": "runs/ollama-aratox-multilabel-pilot-300/ollama_hf.co_yasserrmd_Fanar-1-9B-Instruct-gguf_Q4_K_M_multilabel_zero_shot/predictions.jsonl",
+        "sha256": "c9d785381a13931ff96d65a0d3f0a71d423699f2c4093a138d45d21db232f357",
+        "accuracy": 0.31333333333333335
+      },
+      "accuracy_difference_a_minus_b": 0.17666666666666667,
+      "paired_bootstrap_95": {
+        "low": 0.11666666666666667,
+        "high": 0.23666666666666666
+      },
+      "contingency": {
+        "both_correct": 71,
+        "only_a_correct": 76,
+        "only_b_correct": 23,
+        "neither_correct": 130
+      },
+      "mcnemar_exact_two_sided_p": 8.534327680773061e-08,
+      "bootstrap_iterations": 10000,
+      "seed": 42,
+      "mcnemar_holm_adjusted_p": 4.267163840386531e-07
+    },
+    {
+      "schema_version": "0.1",
+      "paired_examples": 500,
+      "a": {
+        "predictions": "runs/ollama-iadd-region-pilot-500/ollama_hf.co_yasserrmd_Fanar-1-9B-Instruct-gguf_Q4_K_M_dialect_region_zero_shot/predictions.jsonl",
+        "sha256": "0dce733ef2661d28798d83644b50f34e2b8d6929b29c3cb4c6c5dcd09c8136e2",
+        "accuracy": 0.478
+      },
+      "b": {
+        "predictions": "runs/ollama-iadd-region-pilot-500/ollama_qwen2.5_3b_dialect_region_zero_shot/predictions.jsonl",
+        "sha256": "febec01da41df3bd57cf2b15adb00767af0d4e46734d9a70c326bb5d5fed0846",
+        "accuracy": 0.224
+      },
+      "accuracy_difference_a_minus_b": 0.254,
+      "paired_bootstrap_95": {
+        "low": 0.202,
+        "high": 0.306
+      },
+      "contingency": {
+        "both_correct": 71,
+        "only_a_correct": 168,
+        "only_b_correct": 41,
+        "neither_correct": 220
+      },
+      "mcnemar_exact_two_sided_p": 1.9081928249368653e-19,
+      "bootstrap_iterations": 10000,
+      "seed": 42,
+      "mcnemar_holm_adjusted_p": 1.5265542599494922e-18
+    },
+    {
+      "schema_version": "0.1",
+      "paired_examples": 500,
+      "a": {
+        "predictions": "runs/iadd-supervised-diagnostic/char_ngram_nb/predictions.jsonl",
+        "sha256": "36e8c62aac802233f430066987ad2f7476d6376a8631821cdcd6535472c89232",
+        "accuracy": 0.698
+      },
+      "b": {
+        "predictions": "runs/ollama-iadd-region-pilot-500/ollama_hf.co_yasserrmd_Fanar-1-9B-Instruct-gguf_Q4_K_M_dialect_region_zero_shot/predictions.jsonl",
+        "sha256": "0dce733ef2661d28798d83644b50f34e2b8d6929b29c3cb4c6c5dcd09c8136e2",
+        "accuracy": 0.478
+      },
+      "accuracy_difference_a_minus_b": 0.22,
+      "paired_bootstrap_95": {
+        "low": 0.162,
+        "high": 0.276
+      },
+      "contingency": {
+        "both_correct": 178,
+        "only_a_correct": 171,
+        "only_b_correct": 61,
+        "neither_correct": 90
+      },
+      "mcnemar_exact_two_sided_p": 2.9451440755585555e-13,
+      "bootstrap_iterations": 10000,
+      "seed": 42,
+      "mcnemar_holm_adjusted_p": 1.7670864453351334e-12
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.1",
+  "paired_examples": 100,
+  "a": {
+    "predictions": "runs/aratox-binary-sample100/char_ngram_nb/predictions.jsonl",
+    "sha256": "d0442fb34fe902f3561583121eeea113cfa0772e17fb04bc981e87405cf7f871",
+    "accuracy": 0.97
+  },
+  "b": {
+    "predictions": "runs/ollama-aratox-random-pilot-100/ollama_hf.co_yasserrmd_Fanar-1-9B-Instruct-gguf_Q4_K_M_zero_shot/predictions.jsonl",
+    "sha256": "84e98f912535926966d7040bfd10060ed907444744a138762508b25df1ad9e8e",
+    "accuracy": 0.88
+  },
+  "accuracy_difference_a_minus_b": 0.09,
+  "paired_bootstrap_95": {
+    "low": 0.02,
+    "high": 0.17
+  },
+  "contingency": {
+    "both_correct": 85,
+    "only_a_correct": 12,
+    "only_b_correct": 3,
+    "neither_correct": 0
+  },
+  "mcnemar_exact_two_sided_p": 0.03515625,
+  "bootstrap_iterations": 10000,
+  "seed": 42
+}

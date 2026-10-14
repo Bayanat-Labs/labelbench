@@ -1,0 +1,15 @@
+LabelBench by Bayanat Labs
+Copyright 2026 Bayanat Labs
+
+This product includes software developed by Bayanat Labs (https://www.bayanatlabs.com).
+
+The code in this repository is licensed under the Apache License 2.0 (LICENSE).
+The results, registry, specification and paper files listed in LICENSE-data
+are licensed under the Creative Commons Attribution 4.0 International License.
+
+No third-party dataset is included in this repository. The code downloads each
+source from its original location, and each source keeps its own license.
+See DATA.md.
+
+The Bayanat Labs name, logo and project branding are not licensed under the
+Apache License 2.0 or under any data license in this repository.

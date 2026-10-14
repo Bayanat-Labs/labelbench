@@ -1,0 +1,132 @@
+{
+  "schema_version": "0.1",
+  "datasets": [
+    {
+      "id": "massive_ar_sa",
+      "name": "MASSIVE Arabic (Saudi Arabia locale)",
+      "canonical_source": "https://huggingface.co/datasets/AmazonScience/massive",
+      "revision": "e6c0d86b14b23cb7843fa5b6d8be335b1b4506ab",
+      "release_archive": {
+        "version": "1.1",
+        "url": "https://amazon-massive-nlu-dataset.s3.amazonaws.com/amazon-massive-dataset-1.1.tar.gz",
+        "sha256": "4cba5faa11c71437928e17cb1b9b3d8b8e727e7ea363a3a9a8045e19c0491577"
+      },
+      "paper": "https://arxiv.org/abs/2204.08582",
+      "license": {
+        "data": "CC BY 4.0",
+        "repository_code": "Apache-2.0",
+        "verified_from": "https://huggingface.co/datasets/AmazonScience/massive/blob/e6c0d86b14b23cb7843fa5b6d8be335b1b4506ab/LICENSE"
+      },
+      "task_families": [
+        "intent_classification",
+        "slot_filling"
+      ],
+      "config": "ar-SA",
+      "splits": [
+        "train",
+        "validation",
+        "test"
+      ],
+      "arabic_provenance": "human_localized_translation",
+      "source_method": "Localized from the English SLURP voice-assistant dataset.",
+      "annotation_method": "Human localization with additional quality judgments included in the release.",
+      "variety_claim": "Arabic locale for Saudi Arabia; not evidence of native-authored Saudi sub-dialects.",
+      "known_limitations": [
+        "Translation/localization artifacts",
+        "Voice-assistant domain only",
+        "Closed ontology of 60 intents",
+        "Cannot support a native-dialect headline"
+      ],
+      "status": "pilot_only",
+      "redistribution": "Attribution required under CC BY 4.0"
+    },
+    {
+      "id": "aratox",
+      "name": "AraTox",
+      "canonical_source": "https://huggingface.co/datasets/Alshargi/Aratox",
+      "revision": "438f12260480318b976b15b23212ed3a661c088f",
+      "paper": "https://doi.org/10.1007/s10579-026-09917-9",
+      "license": {
+        "data": "CC BY 4.0",
+        "verified_from": "https://huggingface.co/datasets/Alshargi/Aratox/blob/9e0ec3918e0b6feb0a45ebef7f7977555c9e4d50/README.md"
+      },
+      "release_files": {
+        "train": {
+          "path": "aratox_train.csv",
+          "sha256": "0a10c60fa15b15dd0a73855d8a46d0beed4db3a3fe1daebf5594c052f35d4e3e"
+        },
+        "test": {
+          "path": "aratox_test.csv",
+          "sha256": "27dc4b80ffe79f46a4d2abe3aad362c3273827c68dfcc581ab4341ecd7636a7c"
+        }
+      },
+      "task_families": [
+        "toxicity_multilabel"
+      ],
+      "arabic_provenance": "naturally_occurring_human_annotated",
+      "source_method": "Real-world Arabic social-media text reported by the authors.",
+      "annotation_method": "Human multi-label annotation reported by the authors.",
+      "variety_claim": "Reported coverage of Gulf, Levantine, Nile Basin, North African, Yemeni, and MSA.",
+      "known_limitations": [
+        "Released rows do not contain per-item dialect labels",
+        "Social-media sampling can introduce demographic and topic bias",
+        "The binary pilot collapses the richer multi-label ontology"
+      ],
+      "status": "approved_native_aggregate",
+      "redistribution": "Attribution required under CC BY 4.0"
+    },
+    {
+      "id": "arbanking77",
+      "name": "ArBanking77",
+      "canonical_source": "https://sina.birzeit.edu/arbanking77/",
+      "paper": "https://arxiv.org/abs/2310.19034",
+      "license": {
+        "data": "TO_VERIFY",
+        "verified_from": null
+      },
+      "task_families": [
+        "intent_classification"
+      ],
+      "arabic_provenance": "human_localized_translation",
+      "variety_claim": "MSA and Palestinian dialect localization of Banking77.",
+      "known_limitations": [
+        "Derived from an English intent dataset",
+        "License must be verified before downloading or publishing results"
+      ],
+      "status": "blocked_license_review"
+    },
+    {
+      "id": "iadd_dart_region",
+      "name": "IADD DART common-source region subset",
+      "canonical_source": "https://github.com/JihadZa/IADD",
+      "revision": "340b5a6135f70878b95481edcaae4e3afb2067ac",
+      "paper": "https://doi.org/10.1016/j.dib.2021.107777",
+      "license": {
+        "data": "NO EXPLICIT REPOSITORY LICENSE; paper is CC BY 4.0",
+        "verified_from": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8741435/"
+      },
+      "release_files": {
+        "data": {
+          "path": "IADD.json",
+          "sha256": "a28c106d1825debabb6b16979c6c6ca66abdfd0d7802fd899b5ec4d7aee0f734"
+        }
+      },
+      "task_families": [
+        "dialect_region_identification"
+      ],
+      "arabic_provenance": "integrated_human_annotated_and_source_labeled",
+      "source_method": "IADD integrates DART, SHAMI, TSAC, PADIC, and AOC. The benchmark manifest uses only DART so all five region labels share one source.",
+      "annotation_method": "DART is reported as crowdsourced dialect annotation; IADD harmonizes region labels.",
+      "variety_claim": "Five region labels: Gulf, Egyptian, Levantine, Maghrebi, and Iraqi.",
+      "known_limitations": [
+        "Repository has no explicit dataset license",
+        "Evaluation-only: do not redistribute source text",
+        "Iraqi DART pool is small",
+        "Region labels are coarse and cannot establish country-level performance",
+        "Social-media text and legacy collection period may not represent current usage"
+      ],
+      "status": "evaluation_only_no_redistribution",
+      "redistribution": "Do not redistribute text; publish aggregate results and item hashes only"
+    }
+  ]
+}

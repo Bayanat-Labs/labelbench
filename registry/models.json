@@ -1,0 +1,84 @@
+{
+  "schema_version": "0.1",
+  "models": [
+    {
+      "id": "majority",
+      "kind": "local_baseline",
+      "status": "implemented",
+      "cost_basis": "none"
+    },
+    {
+      "id": "char_ngram_nb",
+      "kind": "local_baseline",
+      "status": "implemented",
+      "cost_basis": "none"
+    },
+    {
+      "id": "frontier_api_placeholder",
+      "kind": "api",
+      "status": "blocked_credentials_and_version_selection",
+      "required_metadata": [
+        "provider",
+        "exact_model_string",
+        "pricing_snapshot_date",
+        "input_price",
+        "output_price"
+      ]
+    },
+    {
+      "id": "arabic_open_weight_placeholder",
+      "kind": "local_or_hosted",
+      "status": "pending_hardware_probe_and_license_review"
+    },
+    {
+      "id": "ollama_qwen2_5_3b",
+      "kind": "local_open_weight",
+      "status": "implemented_for_binary_toxicity_pilot",
+      "runtime": "Ollama",
+      "exact_local_digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b"
+    },
+    {
+      "id": "openai_gpt_5_4_mini_2026_03_17",
+      "kind": "api",
+      "status": "implemented_credentials_required",
+      "runtime": "OpenAI Responses API",
+      "exact_model_string": "gpt-5.4-mini-2026-03-17",
+      "structured_outputs": true,
+      "store": false,
+      "pricing_snapshot_date": "2026-07-06",
+      "input_usd_per_million_tokens": 0.75,
+      "output_usd_per_million_tokens": 4.5,
+      "pricing_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini"
+    },
+    {
+      "id": "ollama_qwen2_7_6b",
+      "kind": "local_open_weight",
+      "status": "evaluated_dialect_region",
+      "runtime": "Ollama",
+      "parameter_size": "7.6B",
+      "quantization": "Q4_0",
+      "exact_local_digest": "dd314f039b9d54d5553002c906ce50c9fe7242f73f0680abd04f01c8ecbd2755"
+    },
+    {
+      "id": "ollama_llama3_8b",
+      "kind": "local_open_weight",
+      "status": "evaluated_dialect_region",
+      "runtime": "Ollama",
+      "parameter_size": "8.0B",
+      "quantization": "Q4_0",
+      "exact_local_digest": "365c0bd3c000a25d28ddbf732fe1c6add414de7275464c4e4d1c3b5fcb5d8ad1"
+    },
+    {
+      "id": "fanar_1_9b_instruct_q4_k_m",
+      "kind": "local_arabic_open_weight",
+      "status": "evaluated_dialect_region",
+      "runtime": "Ollama imported GGUF",
+      "parameter_size": "8.78B",
+      "quantization": "Q4_K_M",
+      "license": "apache-2.0",
+      "source_revision": "b3aecbcee0f356a1b1f5fce8e964e7e298e6f41c",
+      "source": "https://huggingface.co/yasserrmd/Fanar-1-9B-Instruct-gguf",
+      "exact_local_digest": "688386aeeab85a09e8d10f4512fa89ffaa131df16b6b9eb515b3844460ee5599"
+    }
+  ]
+}

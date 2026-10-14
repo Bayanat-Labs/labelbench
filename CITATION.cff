@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use LabelBench, please cite the technical report below."
+type: software
+title: "LabelBench"
+version: "0.1.0"
+license: Apache-2.0
+repository-code: "https://github.com/Bayanat-Labs/labelbench"
+url: "https://www.bayanatlabs.com/research/labelbench"
+authors:
+  - name: "Bayanat Labs Research"
+preferred-citation:
+  type: report
+  title: "Arabic Annotation Is Not Binary: LabelBench, a Reproducible Audit of Automated Data Labeling"
+  authors:
+    - name: "Bayanat Labs Research"
+  institution:
+    name: "Bayanat Labs"
+  year: 2026
+  month: 7
+  number: "v0.1"
+  url: "https://www.bayanatlabs.com/research/labelbench"

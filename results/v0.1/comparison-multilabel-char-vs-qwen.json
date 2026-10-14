@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.1",
+  "paired_examples": 300,
+  "a": {
+    "predictions": "runs/aratox-multilabel-sample300/char_ngram_nb_ovr_tuned/predictions.jsonl",
+    "sha256": "f48df069d26e91607d4c607280f20378cb7689562695d341a5bd217a4ec722e1",
+    "accuracy": 0.49
+  },
+  "b": {
+    "predictions": "runs/ollama-aratox-multilabel-pilot-300/ollama_qwen2.5_3b_multilabel_zero_shot/predictions.jsonl",
+    "sha256": "ba2a00e32273c93289d96050496bca6819b59e3a2b2c12b0387fcb3a8594ce8a",
+    "accuracy": 0.25333333333333335
+  },
+  "accuracy_difference_a_minus_b": 0.23666666666666666,
+  "paired_bootstrap_95": {
+    "low": 0.17666666666666667,
+    "high": 0.2966666666666667
+  },
+  "contingency": {
+    "both_correct": 62,
+    "only_a_correct": 85,
+    "only_b_correct": 14,
+    "neither_correct": 139
+  },
+  "mcnemar_exact_two_sided_p": 1.4279916347173858e-13,
+  "bootstrap_iterations": 10000,
+  "seed": 42
+}

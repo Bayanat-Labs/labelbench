@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LabelBench by Bayanat Labs: blinded review</title>
+  <style>
+    :root{--ink:#111116;--muted:#6b6b74;--line:#dedee6;--soft:#f6f6f9;--brand:#4f46e5;--danger:#b42318}
+    *{box-sizing:border-box}body{margin:0;background:#f0f0f4;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif}
+    button,input,textarea{font:inherit}.shell{max-width:980px;margin:0 auto;min-height:100vh;background:white;box-shadow:0 0 40px #00000012}
+    header{padding:22px 30px;border-bottom:1px solid var(--line);display:flex;gap:18px;align-items:center;justify-content:space-between}
+    .brand{font-weight:750}.muted{color:var(--muted)}.progress{height:5px;background:#e8e8ef}.progress>div{height:100%;background:var(--brand);transition:width .2s}
+    main{padding:28px 30px 110px}.setup{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;padding:18px;background:var(--soft);border-radius:12px}
+    label span{display:block;font-size:12px;font-weight:650;color:var(--muted);margin-bottom:6px}.setup input{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:8px}
+    .task-meta{display:flex;justify-content:space-between;color:var(--muted);font-size:13px;margin-bottom:14px}
+    .arabic{font-family:"Noto Naskh Arabic","Geeza Pro",serif;font-size:28px;line-height:1.9;text-align:right;direction:rtl;padding:24px;border:1px solid var(--line);border-radius:12px;background:#fff;margin-bottom:22px;min-height:145px}
+    .labels{display:grid;grid-template-columns:1fr 1fr;gap:10px}.choice{display:flex;gap:10px;align-items:flex-start;padding:14px;border:1px solid var(--line);border-radius:10px;cursor:pointer}
+    .choice:has(input:checked){border-color:var(--brand);background:#f1f0ff}.choice input{margin-top:3px}.choice strong{display:block}.choice small{display:block;color:var(--muted);margin-top:3px;line-height:1.35}
+    .section{margin-top:22px}.section h3{font-size:14px;margin:0 0 10px}.confidence,.flags{display:flex;gap:10px;flex-wrap:wrap}.pill{padding:9px 12px;border:1px solid var(--line);border-radius:99px;cursor:pointer}.pill:has(input:checked){border-color:var(--brand);background:#f1f0ff}
+    textarea{width:100%;min-height:70px;padding:10px;border:1px solid var(--line);border-radius:8px;resize:vertical}
+    footer{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(980px,100%);padding:16px 30px;background:#fffffff2;backdrop-filter:blur(8px);border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px}
+    button{border:0;border-radius:8px;padding:11px 17px;font-weight:650;cursor:pointer}.primary{background:var(--ink);color:#fff}.secondary{background:var(--soft);color:var(--ink)}.export{background:var(--brand);color:#fff}
+    .error{color:var(--danger);font-size:13px;min-height:20px;margin-top:10px}.done{text-align:center;padding:70px 20px}.hidden{display:none!important}
+    @media(max-width:680px){header,main,footer{padding-left:18px;padding-right:18px}.setup,.labels{grid-template-columns:1fr}.arabic{font-size:24px}}
+  </style>
+</head>
+<body>
+<div class="shell">
+  <header>
+    <div><div class="brand">LabelBench by Bayanat Labs</div><div class="muted">Blinded native review</div></div>
+    <button class="export" id="exportTop">Export progress</button>
+  </header>
+  <div class="progress"><div id="progressBar"></div></div>
+  <main>
+    <div class="setup">
+      <label><span>Reviewer ID (assigned; no name)</span><input id="reviewerId" placeholder="e.g. rater-sa-01"></label>
+      <label><span>Native variety / qualification</span><input id="qualification" placeholder="e.g. Najdi Arabic"></label>
+    </div>
+    <section id="review">
+      <div class="task-meta"><span id="counter"></span><span id="taskId"></span></div>
+      <div class="arabic" id="text"></div>
+      <div class="labels" id="labels"></div>
+      <div class="section">
+        <h3>Confidence in your judgment</h3>
+        <div class="confidence">
+          <label class="pill"><input type="radio" name="confidence" value="1"> Low</label>
+          <label class="pill"><input type="radio" name="confidence" value="2"> Medium</label>
+          <label class="pill"><input type="radio" name="confidence" value="3"> High</label>
+        </div>
+      </div>
+      <div class="section">
+        <h3>Quality flags (optional)</h3>
+        <div class="flags">
+          <label class="pill"><input type="checkbox" name="flag" value="ambiguous"> Ambiguous</label>
+          <label class="pill"><input type="checkbox" name="flag" value="possible_bad_gold"> Possible bad gold</label>
+          <label class="pill"><input type="checkbox" name="flag" value="pii"> Contains PII</label>
+          <label class="pill"><input type="checkbox" name="flag" value="distressing"> Distressing</label>
+        </div>
+      </div>
+      <div class="section"><label><span>Notes (optional)</span><textarea id="notes"></textarea></label></div>
+      <div class="error" id="error"></div>
+    </section>
+    <section class="done hidden" id="done">
+      <h2>Review complete</h2>
+      <p class="muted">Export the submission JSON and send it to the review coordinator, or to hello@bayanatlabs.com.</p>
+      <button class="export" id="exportDone">Export submission</button>
+    </section>
+  </main>
+  <footer>
+    <button class="secondary" id="previous">Previous</button>
+    <div><button class="secondary" id="save">Save</button> <button class="primary" id="next">Save & next</button></div>
+  </footer>
+</div>
+<script id="manifest" type="application/json">__TASK_MANIFEST_JSON__</script>
+<script>
+const manifest=JSON.parse(document.getElementById("manifest").textContent);
+const storageKey=`labelbench:${manifest.task}:${manifest.seed}`;
+let state=JSON.parse(localStorage.getItem(storageKey)||'{"index":0,"judgments":{}}');
+const $=id=>document.getElementById(id);
+function current(){return manifest.tasks[state.index]}
+function persist(){localStorage.setItem(storageKey,JSON.stringify(state));}
+function render(){
+  const task=current(),total=manifest.tasks.length;
+  if(!task){$("review").classList.add("hidden");$("done").classList.remove("hidden");$("progressBar").style.width="100%";return}
+  $("review").classList.remove("hidden");$("done").classList.add("hidden");
+  $("counter").textContent=`Item ${state.index+1} of ${total}`;$("taskId").textContent=task.id;$("text").textContent=task.text;
+  $("progressBar").style.width=`${100*Object.keys(state.judgments).length/total}%`;
+  const saved=state.judgments[task.id]||{};
+  $("labels").innerHTML=task.labels.map(x=>`<label class="choice"><input type="checkbox" name="label" value="${x.id}" ${saved.labels?.includes(x.id)?"checked":""}><span><strong>${x.id}</strong><small>${x.definition}</small></span></label>`).join("");
+  document.querySelectorAll('[name=confidence]').forEach(x=>x.checked=Number(x.value)===saved.confidence);
+  document.querySelectorAll('[name=flag]').forEach(x=>x.checked=saved.flags?.includes(x.value));
+  $("notes").value=saved.notes||"";$("error").textContent="";$("previous").disabled=state.index===0;
+  document.querySelectorAll('[name=label]').forEach(input=>input.addEventListener("change",()=>{
+    if(input.value===task.exclusive_label&&input.checked)document.querySelectorAll('[name=label]').forEach(x=>{if(x!==input)x.checked=false});
+    if(input.value!==task.exclusive_label&&input.checked){const ex=document.querySelector(`[name=label][value="${task.exclusive_label}"]`);if(ex)ex.checked=false}
+  }));
+}
+function save(){
+  const task=current();if(!task)return true;
+  const labels=[...document.querySelectorAll('[name=label]:checked')].map(x=>x.value);
+  const confidence=Number(document.querySelector('[name=confidence]:checked')?.value||0);
+  if(!labels.length){$("error").textContent="Select at least one label.";return false}
+  if(!confidence){$("error").textContent="Choose a confidence level.";return false}
+  state.judgments[task.id]={task_id:task.id,labels,confidence,flags:[...document.querySelectorAll('[name=flag]:checked')].map(x=>x.value),notes:$("notes").value.trim(),saved_at:new Date().toISOString()};
+  persist();$("error").textContent="Saved.";return true
+}
+function exportSubmission(){
+  const reviewerId=$("reviewerId").value.trim(),qualification=$("qualification").value.trim();
+  if(!reviewerId||!qualification){alert("Enter reviewer ID and qualification before exporting.");return}
+  const payload={schema_version:"0.1",benchmark:"bayanat_labelbench",task:manifest.task,manifest_seed:manifest.seed,reviewer:{id:reviewerId,qualification},exported_at:new Date().toISOString(),judgments:Object.values(state.judgments)};
+  const blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=`labelbench-${manifest.task}-${reviewerId}.json`;a.click();URL.revokeObjectURL(a.href);
+}
+$("save").onclick=save;$("next").onclick=()=>{if(save()){state.index++;persist();render()}};$("previous").onclick=()=>{if(save()){state.index=Math.max(0,state.index-1);persist();render()}};
+$("exportTop").onclick=exportSubmission;$("exportDone").onclick=exportSubmission;
+$("reviewerId").value=state.reviewerId||"";$("qualification").value=state.qualification||"";
+$("reviewerId").onchange=e=>{state.reviewerId=e.target.value;persist()};$("qualification").onchange=e=>{state.qualification=e.target.value;persist()};
+render();
+</script>
+</body>
+</html>
