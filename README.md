@@ -4,7 +4,9 @@
 
 LabelBench is a reproducible audit of automated Arabic data labeling from [Bayanat Labs](https://www.bayanatlabs.com). It measures how much of a labeling queue can be accepted at a declared quality floor, then breaks the answer down by taxonomy, task and Arabic variety.
 
-[Project page](https://www.bayanatlabs.com/research/labelbench) · [Technical report (PDF)](https://www.bayanatlabs.com/research/labelbench-paper-v0.1.pdf) · Code Apache-2.0 · Results CC BY 4.0 · Version 0.1.0
+[Project page](https://www.bayanatlabs.com/research/labelbench) · [Technical report (PDF)](https://www.bayanatlabs.com/research/labelbench-paper-v0.1.pdf) · Code Apache-2.0 · Results CC BY 4.0 · Version 0.1.1
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23355784.svg)](https://doi.org/10.5281/zenodo.23355784)
 
 ## The v0.1 finding
 
@@ -210,7 +212,9 @@ Raw data, normalized text, review submissions, and model outputs are ignored by 
 
 ## Cite
 
-If you use LabelBench, please cite the technical report. GitHub's "Cite this repository" button reads [CITATION.cff](CITATION.cff). A Zenodo DOI will be added with the first GitHub release.
+If you use LabelBench, please cite the technical report. GitHub's "Cite this repository" button reads [CITATION.cff](CITATION.cff). To cite the software itself, use its Zenodo DOI.
+
+DOI for all versions: [10.5281/zenodo.23355784](https://doi.org/10.5281/zenodo.23355784). This release (v0.1.1): [10.5281/zenodo.23355785](https://doi.org/10.5281/zenodo.23355785).
 
 ```bibtex
 @techreport{bayanat2026labelbench,
